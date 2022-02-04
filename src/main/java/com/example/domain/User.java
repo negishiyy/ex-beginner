@@ -1,9 +1,9 @@
-package com.example.form;
+package com.example.domain;
 
-public class UserForm {
+public class User {
 	
 	private String name;
-	private String age;
+	private Integer age;
 	private String commnet;
 	
 	
@@ -13,10 +13,10 @@ public class UserForm {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	public String getCommnet() {
@@ -26,14 +26,10 @@ public class UserForm {
 		this.commnet = commnet;
 	}
 	
-	
 	@Override
 	public String toString() {
-		return "UserForm [name=" + name + ", age=" + age + ", commnet=" + commnet + "]";
+		return "User [name=" + name + ", age=" + age + ", commnet=" + commnet + "]";
 	}
-	
-	
-	
-	
+
 	
 }
