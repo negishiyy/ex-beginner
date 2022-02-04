@@ -1,3 +1,5 @@
+//requestパラメーターを受け取るクラス
+
 package com.example.form;
 
 public class UserForm {

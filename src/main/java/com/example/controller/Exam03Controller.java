@@ -17,15 +17,15 @@ public class Exam03Controller {
 	}
 	
 	@RequestMapping("/total")
-	public String totalPrice(String num1, String num2, String num3, Model model) {
+	public String totalPrice(Integer num1, Integer num2, Integer num3, Model model) {
 		model.addAttribute("num1", num1);
 		model.addAttribute("num2", num2);
 		model.addAttribute("num3", num3);
 		
-		int extendTax =(int)(num1+num2)-((num1+num2)* 0.1);
+		int extendTax =(int)((num1+num2+num3)-((num1+num2+num3) * 0.1));
 		model.addAttribute("number1", extendTax);
 		
-		int includeTax =(int)(num1* 0.1) + (num2* 0.1);
+		int includeTax =(int)((num1* 1.1) + (num2* 1.1)+ (num3* 1.1));
 		model.addAttribute("number2", includeTax);
 		
 		return "exam03-result";
